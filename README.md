@@ -1,4 +1,4 @@
-# song-length-cli
+# song-length (command-line tool)
 
 
 ## Installing
