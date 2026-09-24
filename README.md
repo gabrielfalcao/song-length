@@ -1,6 +1,13 @@
 # song-length-cli
 
 
+## Installing
+
+
+```shell
+cargo install song-length
+```
+
 ## Usage
 
 
