@@ -1,11 +1,31 @@
 # song-length-cli
 
 
+## Usage
 
 
-
-Generated via `cargo craft`:
+There's not much to it, simply run the command above, choose which
+command to use and pass the required parameter.
 
 ```shell
-[2026/09/24 00:09:01 UTC] '/Users/gabrielfalcao/.cargo/bin/cargo-craft' 'craft' -csma -- 'song-length-cli'
+song-length --help
+```
+
+
+## Examples
+
+### Calculating Bars to Minutes
+
+
+```shell
+$ song-length bars-to-minutes 160
+total minutes for a 128bpm song: 5m
+```
+
+### Calculating Minutes to Bars
+
+
+```shell
+$ song-length minutes-to-bars 8
+total bars for a 8m at 128bpm song: 256
 ```

@@ -1,9 +1,9 @@
 [package]
-name = "song-length-cli"
+name = "song-length"
 version = "0.0.1"
-description = "song-length-cli command-line"
+description = "calculates song length in bars or minutes via BPM and beats per bar"
 readme = "README.md"
-homepage = "https://crates.io/crates/song-length-cli"
+homepage = "https://crates.io/crates/song-length"
 license = "MIT OR Apache-2.0"
 edition = "2024"
 autoexamples = false
@@ -11,6 +11,12 @@ autobenches = false
 # default-run = "song-length-cli"
 
 # categories = [] # https://crates.io/category_slugs
+documentation = "https://docs.rs/song-length"
+repository = "https://github.com/gabrielfalcao/song-length"
+
+keywords = ["music", "ableton", "DAW"]
+authors = ["Gabriel DeMoura <gabrielteratos@gmail.com>"]
+categories = ["command-line-interface"]
 
 
 [package.metadata]
@@ -39,7 +45,7 @@ bench = false
 
 
 [[bin]]
-name = "song-length-cli"
+name = "song-length"
 path = "src/main.rs"
 doctest = false
 bench = false
@@ -53,4 +59,3 @@ serde = { version = "1.0.229", features = ["derive"] }
 
 [dev-dependencies]
 pretty_assertions = "1.4.1"
-

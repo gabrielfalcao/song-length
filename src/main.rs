@@ -60,7 +60,7 @@ impl BarsToMinutesOpt {
 impl ArgsDispatcher<Error> for BarsToMinutesOpt {
     fn dispatch(&self) -> Result<()> {
         let bpm = self.bpm;
-        println!("total minutes for a {bpm}bpm song: {length}", length = self.length_in_minutes());
+        println!("total minutes for a {bpm}bpm song: {length}m", length = self.length_in_minutes());
         Ok(())
     }
 }
