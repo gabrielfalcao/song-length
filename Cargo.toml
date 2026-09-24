@@ -1,0 +1,56 @@
+[package]
+name = "song-length-cli"
+version = "0.0.1"
+description = "song-length-cli command-line"
+readme = "README.md"
+homepage = "https://crates.io/crates/song-length-cli"
+license = "MIT OR Apache-2.0"
+edition = "2024"
+autoexamples = false
+autobenches = false
+# default-run = "song-length-cli"
+
+# categories = [] # https://crates.io/category_slugs
+
+
+[package.metadata]
+targets = [
+    # "aarch64-apple-darwin",
+    # "x86_64-unknown-linux-gnu",
+    # "aarch64-unknown-linux-gnu",
+]
+
+[profile.release] # https://github.com/johnthagen/min-sized-rust
+strip = true  # Automatically strip symbols from the binary.
+opt-level = "z"  # Optimize for size. https://doc.rust-lang.org/cargo/reference/profiles.html#opt-level
+lto = true
+panic = "abort"
+codegen-units = 1
+# https://github.com/johnthagen/min-sized-rust?tab=readme-ov-file#remove-fmtdebug
+
+
+
+[lib]
+name = "song_length_cli"
+path = "src/lib.rs"
+
+doctest = false
+bench = false
+
+
+[[bin]]
+name = "song-length-cli"
+path = "src/main.rs"
+doctest = false
+bench = false
+doc = false
+test = false
+
+[dependencies]
+clap = { version = "4.6.7", features = ["derive", "env", "string", "unicode", "wrap_help"] }
+iocore = "3.2.0"
+serde = { version = "1.0.229", features = ["derive"] }
+
+[dev-dependencies]
+pretty_assertions = "1.4.1"
+
